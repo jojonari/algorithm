@@ -1,13 +1,13 @@
-package dev.jojonari.programmers;
+package dev.jojonari.algorithm;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProgrammersApplicationTests {
+class AlgorithmApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }

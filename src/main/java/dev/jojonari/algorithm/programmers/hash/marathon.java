@@ -1,4 +1,4 @@
-package dev.jojonari.programmers.hash;
+package dev.jojonari.algorithm.programmers.hash;
 
 import java.util.Arrays;
 
@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class marathon {
 
-    public String run(String[] participant, String[] completion) {
+    public String solution(String[] participant, String[] completion) {
         Arrays.sort(participant);
         Arrays.sort(completion);
         int i;
