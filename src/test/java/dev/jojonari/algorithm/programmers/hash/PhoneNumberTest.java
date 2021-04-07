@@ -10,12 +10,12 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class phoneNumberTest {
+class PhoneNumberTest {
 
     @Test
     void 전화번호가_모두_다르다() {
         //given
-        var sut = new phoneNumber();
+        var sut = new PhoneNumber();
         String[] phoneBook = {"123", "456", "789"};
 
         //when
@@ -29,7 +29,7 @@ class phoneNumberTest {
     @MethodSource("testArguments")
     void 전화번호_중_접두어로_사용된_번호가_있다(String[] phoneBook) {
         //given
-        var sut = new phoneNumber();
+        var sut = new PhoneNumber();
 
         //when
         boolean actual = sut.solution(phoneBook);

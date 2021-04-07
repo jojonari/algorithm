@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * https://programmers.co.kr/learn/courses/30/lessons/42577
  */
-public class phoneNumber {
+public class PhoneNumber {
     public boolean solution(String[] phoneBook) {
         Arrays.sort(phoneBook);
         int loopCount = phoneBook.length - 1;

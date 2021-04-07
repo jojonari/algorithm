@@ -6,12 +6,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 
-class marathonTest {
+class MarathonTest {
 
     @Test
     void run_correctly_first_player_return() {
         //given
-        var sut = new marathon();
+        var sut = new Marathon();
         String[] participant = {"leo", "kiki", "eden"};
         String[] completion = {"kiki", "eden"};
 
@@ -26,7 +26,7 @@ class marathonTest {
     @Test
     void run_correctly_second_player_return() {
         //given
-        var sut = new marathon();
+        var sut = new Marathon();
         String[] participant = {"leo", "kiki", "eden"};
         String[] completion = {"leo", "eden"};
 
@@ -40,7 +40,7 @@ class marathonTest {
     @Test
     void run_correctly_duple_player_return() {
         //given
-        var sut = new marathon();
+        var sut = new Marathon();
         String[] participant = {"mislav", "stanko", "mislav", "ana"};
         String[] completion = {"mislav", "stanko", "ana"};
 
