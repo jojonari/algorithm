@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 
 /**
  * https://programmers.co.kr/learn/courses/30/lessons/42628
- *
+ * <p>
  * Comparator.reverseOrder() : 내림 차순 정렬
  */
 public class DualPriorityQueue {
@@ -13,24 +13,22 @@ public class DualPriorityQueue {
         PriorityQueue<Integer> queueMin = new PriorityQueue<>();
         PriorityQueue<Integer> queueMax = new PriorityQueue<>(Comparator.reverseOrder());
 
-        for (int i = 0; i < operations.length; i++) {
-            String operation = operations[i];
-            String[] s = operation.split(" ");
+        for (String operation : operations) {
+            String[] operaterArr = operation.split(" ");
+            Integer intValue = Integer.valueOf(operaterArr[1]);
 
-            if (s[0].equals("I")) {
-                queueMin.offer(Integer.valueOf(s[1]));
-                queueMax.offer(Integer.valueOf(s[1]));
+            if ("I".equals(operaterArr[0])) {
+                queueMin.offer(intValue);
+                queueMax.offer(intValue);
                 continue;
             }
 
-            if (Integer.parseInt(s[1]) == 1) {
-                Integer target = queueMax.poll();
-                queueMin.remove(target);
+            if (intValue == 1) {
+                queueMin.remove(queueMax.poll());
                 continue;
             }
 
-            Integer target = queueMin.poll();
-            queueMax.remove(target);
+            queueMax.remove(queueMin.poll());
         }
 
         if (queueMin.isEmpty()) {
