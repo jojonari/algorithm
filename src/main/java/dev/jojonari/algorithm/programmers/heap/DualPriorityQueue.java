@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 
 /**
  * https://programmers.co.kr/learn/courses/30/lessons/42628
- * <p>
+ *
  * Comparator.reverseOrder() : 내림 차순 정렬
  */
 public class DualPriorityQueue {
